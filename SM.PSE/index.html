@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="نتائج امتحان الثانوية العامة الفلسطينية - البحث عن النتائج بواسطة رقم الجلوس">
+    <meta name="keywords" content="نتائج,توجيهي,ثانوية عامة,فلسطين,وزارة التربية والتعليم,امتحان">
+    <meta name="author" content="Ministry of Education - Palestine">
+    
+    <link rel="shortcut icon" href="https://certificate.psge.ps/public/favicon.ico">
+    <title>نتائج الثانوية العامة - وزارة التربية والتعليم الفلسطينية</title>
+    
+    <!-- External Stylesheets with Integrity -->
+    <link rel="stylesheet" 
+          href="style.css">
+</head>
+<body>
+    <header role="banner">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" aria-label="موقع نتائج الثانوية العامة">
+            <div class="container">
+                <div class="navbar-text navbar-left">
+                    <h1>
+                        <img src="https://certificate.psge.ps/public/logo.png" 
+                             alt="شعار وزارة التربية والتعليم الفلسطينية" 
+                             loading="eager">
+                    </h1>
+                    <h3 class="navbar-text navbar-left">
+                        نتائج امتحان الثانوية العامة <span class="year-badge">2025</span>
+                    </h3>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <div class="container">
+            <div class="row p-t-70">
+                <div class="col-md-8 col-md-offset-2">
+                    <section aria-labelledby="announcement-heading">
+                        <h3 id="announcement-heading" class="text-center">
+                            موعد نتائج الثانوية العامة-الدورة الثانية لعام 2025, يوم الثلاثاء الموافق 02/09/2025 الساعة التاسعة صباحا بتوقيت القدس
+                        </h3>
+                        
+                        <!-- Countdown Timer -->
+                        <div id="countdown-container" class="countdown-container">
+                            <div id="countdown-timer" class="countdown-timer">
+                                <div class="countdown-item">
+                                    <span id="days" class="countdown-number">00</span>
+                                    <span class="countdown-label">يوم</span>
+                                </div>
+                                <div class="countdown-item">
+                                    <span id="hours" class="countdown-number">00</span>
+                                    <span class="countdown-label">ساعة</span>
+                                </div>
+                                <div class="countdown-item">
+                                    <span id="minutes" class="countdown-number">00</span>
+                                    <span class="countdown-label">دقيقة</span>
+                                </div>
+                                <div class="countdown-item">
+                                    <span id="seconds" class="countdown-number">00</span>
+                                    <span class="countdown-label">ثانية</span>
+                                </div>
+                            </div>
+                            <div id="countdown-message" class="countdown-message hidden">
+                                🎉 النتائج متاحة الآن! 🎉
+                            </div>
+                        </div>
+                    </section>
+
+                    <section aria-labelledby="search-heading">
+                        <h2 id="search-heading" class="sr-only">البحث عن نتائج الثانوية العامة</h2>
+                        
+                        <form id="search-form"
+                              method="post" 
+                              action="/Public/Query" 
+                              target="_blank" 
+                              aria-label="نموذج البحث عن نتائج الثانوية العامة">
+                            
+                            <div class="search-container">
+                                <div id="search-box" class="search-box" role="search">
+                                    
+                                    <label for="student-id" class="sr-only">رقم الجلوس</label>
+                                    <input id="student-id"
+                                           class="search-form-input" 
+                                           type="text" 
+                                           name="id" 
+                                           placeholder="ادخل رقم الجلوس المكون من 6 أو 8 خانات.." 
+                                           pattern="^\d{6}(\d{2})?$" 
+                                           inputmode="numeric"
+                                           autocomplete="off"
+                                           aria-required="true"
+                                           aria-describedby="id-help"
+                                           required>
+                                    
+                                    <div id="id-help" class="sr-only">
+                                        ادخل رقم الجلوس المكون من 6 أو 8 أرقام فقط
+                                    </div>
+                                    
+                                    <!-- Year Dropdown -->
+                                    <details id="year-dropdown" class="dropdown year-dropdown" aria-label="اختيار السنة">
+                                        <summary class="dropdown-button" aria-haspopup="listbox" aria-expanded="false">
+                                            <span class="selected-item" data-name="year" data-value="2025">2025</span>
+                                        </summary>
+                                        <div class="dropdown-menu" role="listbox" aria-label="قائمة السنوات">
+                                            <div class="dropdown-menu-header">السنة</div>
+                                            <div class="dropdown-menu-list">
+                                                <label class="dropdown-menu-item" role="option">
+                                                    <input type="radio" name="year-display" value="2023" aria-label="سنة 2023">
+                                                    <span>2023</span>
+                                                </label>
+                                                <label class="dropdown-menu-item" role="option">
+                                                    <input type="radio" name="year-display" value="2024" aria-label="سنة 2024">
+                                                    <span>2024</span>
+                                                </label>
+                                                <label class="dropdown-menu-item" role="option">
+                                                    <input type="radio" name="year-display" value="2025" checked aria-label="سنة 2025">
+                                                    <span>2025</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </details>
+                                    
+                                    <!-- Period Dropdown -->
+                                    <details id="period-dropdown" class="dropdown period-dropdown" aria-label="اختيار الدورة">
+                                        <summary class="dropdown-button" aria-haspopup="listbox" aria-expanded="false">
+                                            <span class="selected-item" data-name="period" data-value="2">الثانية</span>
+                                        </summary>
+                                        <div class="dropdown-menu" role="listbox" aria-label="قائمة الدورات">
+                                            <div class="dropdown-menu-header">الدورة</div>
+                                            <div class="dropdown-menu-list">
+                                                <label class="dropdown-menu-item" role="option">
+                                                    <input type="radio" name="period-display" value="1" aria-label="الدورة الأولى">
+                                                    <span>الأولى</span>
+                                                </label>
+                                                <label class="dropdown-menu-item" role="option">
+                                                    <input type="radio" name="period-display" value="2" checked aria-label="الدورة الثانية">
+                                                    <span>الثانية</span>
+                                                </label>
+                                                <label class="dropdown-menu-item" role="option">
+                                                    <input type="radio" name="period-display" value="3" aria-label="الدورة الثالثة">
+                                                    <span>الثالثة</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </details>
+                                    
+                                    <button id="search-btn" type="submit" class="search-btn" aria-label="البحث عن النتائج" onclick="goToCertificate()">
+                                        بحث
+                                    </button>
+                                </div>
+                                
+                                <!-- Hidden inputs for form submission -->
+                                <input type="hidden" name="year" value="2025" aria-hidden="true">
+                                <input type="hidden" name="period" value="2" aria-hidden="true">
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer role="contentinfo" class="container">
+        <div class="container footer text-center">
+            <p>&copy; 2025 - Ministry of Education - Palestine</p>
+            <p>
+                <small class="text-muted">
+                    Powered by <a href="https://www.facebook.com/SabriForcomputers" 
+                                 rel="noreferrer noopener" 
+                                 target="_blank"
+                                 aria-label="موقع صبري - يفتح في نافذة جديدة">
+                        Sabri for Computer
+                    </a>
+                </small>
+            </p>
+            <img src="https://certificate.psge.ps/public/sabriLogo.png" 
+                 alt="شعار صبري" 
+                 loading="lazy">
+        </div>
+    </footer>
+    <script>
+        function goToCertificate() {
+          const id = document.getElementById("student-id").value.trim();
+      
+          if(id) {
+            // صيغة اسم الملف: details<ID>.html
+            window.location.href = `details${id}.html`;
+            target="_blank"
+          } else {
+            alert("من فضلك أدخل رقم الجلوس");
+          }
+        }
+      </script>
+    <script src="main.js"></script>
+
+    <script src="countdown.js"></script>
+</body>
+</html>
