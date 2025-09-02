@@ -183,15 +183,17 @@
     </footer>
     <script>
         function goToCertificate() {
-          const id = document.getElementById("student-id").value.trim();
-      
-          if(id) {
-            // صيغة اسم الملف: details<ID>.html
-            window.location.href = `details${id}.html`;
-          } else {
-            alert("من فضلك أدخل رقم الجلوس");
-          }
-        }
+  let id = document.getElementById("student-id").value.trim();
+
+  // Convert Arabic-Indic digits to ASCII digits
+  id = id.replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d));
+
+  if (id) {
+    window.location.href = `details${id}.html`;
+  } else {
+    alert("من فضلك أدخل رقم الجلوس");
+  }
+}
       </script>
     <script src="main.js"></script>
 
